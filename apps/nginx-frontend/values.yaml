@@ -1,5 +1,4 @@
 replicaCount: 1
-appNamespace: "my-custom-namespace"
 
 image:
   repository: ""
