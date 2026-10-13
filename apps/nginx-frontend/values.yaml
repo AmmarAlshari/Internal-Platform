@@ -1,12 +1,18 @@
-replicaCount: 5
+replicaCount: 1
 
 image:
-  repository: nginx
+  repository: ""
   tag: latest
   pullPolicy: IfNotPresent
 
+containerPort: 8080
+
 service:
+  enabled: true
   type: ClusterIP
   port: 80
 
-containerPort: 80
+ingress:
+  enabled: false
+
+resources: {}
