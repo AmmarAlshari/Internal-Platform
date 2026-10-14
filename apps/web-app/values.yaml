@@ -1,0 +1,22 @@
+appName: web-app
+appNamespace: nginx-platform
+replicaCount: 2
+
+image:
+  repository: traefik/whoami
+  tag: "v1.10"
+  pullPolicy: IfNotPresent
+
+containerPort: 8000
+
+service:
+  type: ClusterIP
+  port: 8000
+
+livenessProbe:
+  httpGet:
+    path: /
+
+readinessProbe:
+  httpGet:
+    path: /
