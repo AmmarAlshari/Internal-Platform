@@ -1,6 +1,6 @@
 appName: web-app
 appNamespace: nginx-platform
-replicaCount: 2
+replicaCount: 1
 
 image:
   repository: traefik/whoami
